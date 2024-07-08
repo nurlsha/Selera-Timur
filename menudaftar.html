@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabung bersama Selera Timur!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #f8f8f8;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #ccc;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .container {
+            display: flex;
+            flex: 1;
+        }
+        .form-container {
+            flex: 2;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .form-container h2 {
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        .input-group {
+            display: flex;
+            justify-content: space-between;
+        }
+        .input-group input {
+            width: 45%;
+            padding: 10px;
+            margin-bottom: 25px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4e4e9c;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-bottom: 20px;
+            font-size: 16px;
+            width: 150px; /* Ubah lebar sesuai kebutuhan */
+            margin-left: auto; /* Geser tombol ke kanan */
+            margin-right: auto; /* Geser tombol ke kiri */
+            
+        }
+        button:hover {
+            background-color: #06060f;
+        }
+        .login-link {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .login-link a {
+            color: #4e4e9c;
+            text-decoration: none;
+        }
+        .image-container {
+            flex: 1;
+            background-image: url('gambar/image/register.jpg');
+            background-size: cover;
+            background-position: center;
+            border-left: 1px solid #ccc;
+        }
+        footer {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            background-color: #f8f8f8;
+            border-top: 1px solid #ccc;
+        }
+        .footer-item h2 {
+            color: #4CAF50;
+            font-weight: bold;
+            margin: 0;
+            font-size: 38px; /* Ubah ukuran sesuai kebutuhan */
+        }
+        .footer-item h3 {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+        }
+        .footer-item ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer-item ul li {
+            margin: 5px 0;
+        }
+        .footer-item ul li a {
+            color: #4e4e9c;
+            text-decoration: none;
+        }
+        .social-media {
+            display: flex;
+            align-items: center;
+        }
+        .social-media img {
+            width: 24px;
+            height: 24px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Gabung bersama Selera Timur!</h1>
+    </header>
+    <div class="container">
+        <div class="form-container">
+            <h2>Identitas saya</h2>
+            <form>
+                <div class="input-group">
+                    <input type="text" placeholder="Nama depan">
+                    <input type="text" placeholder="Nama belakang">
+                </div>
+                <div class="input-group">
+                    <input type="email" placeholder="Email">
+                    <input type="tel" placeholder="Nomor ponsel">
+                </div>
+                <div class="input-group">
+                    <input type="password" placeholder="Kata sandi">
+                    <input type="password" placeholder="Konfirmasi kata sandi">
+                </div>
+                <button type="submit">Masuk</button>
+                <p class="login-link">Sudah punya akun? <a href="#">Masuk</a></p>
+            </form>
+        </div>
+        <div class="image-container"></div>
+    </div>
+    <footer>
+        <div class="footer-item">
+            <h2>Selera Timur</h2>
+        </div>
+        <div class="footer-item">
+            <h3>Bantuan</h3>
+            <ul>
+                <li><a href="#">Hubungi kami</a></li>
+                <li><a href="#">Sitemap</a></li>
+            </ul>
+        </div>
+        <div class="footer-item">
+            <h3>Ikuti Kami</h3>
+            <div class="social-media">
+                <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"></a>
+                <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook"></a>
+                <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/X_logo_2023.svg" alt="Twitter"></a>
+            </div>
+        </div>
+    </footer>
+
+    
+</body>
+</html>

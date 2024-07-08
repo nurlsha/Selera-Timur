@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selera Timur</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('gambar/image/Selera timur.jpg'); /* Ensure the image path is correct */
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        header {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px 20px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 2em;
+            color: green;
+        }
+        nav {
+            display: flex;
+            align-items: center;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+        }
+        nav input[type="text"] {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            margin: 0 15px;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            color: #333;
+            margin-top: 80px;
+        }
+        .content {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 150px;
+            border-radius: 25px;
+            max-width: 700px;
+            position: relative;
+        }
+        .welcome {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            text-align: left;
+        }
+        .content h1 {
+            font-size: 2.5em;
+            margin-top: 20px;
+        }
+        .brown-text {
+            color: brown;
+        }
+        .green-text {
+            color: green;
+        }
+        .description {
+            margin-top: 20px;
+            font-size: 1.2em;
+            line-height: 1.5em;
+        }
+        /* Styles for Kategori section */
+        .slide-2 {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 50px 20px;
+            border-radius: 25px;
+            max-width: 1000px;
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+        .header {
+            color: #4CAF50;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .category-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .category-card {
+            background-color: #FFE4E1;
+            border-radius: 10px;
+            padding: 20px;
+            width: 30%;
+            text-align: center;
+        }
+        .category-icon {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+        .category-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .category-description {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .arrow-icon {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background-color: #fff;
+            border-radius: 50%;
+            line-height: 30px;
+            text-align: center;
+        }
+        /* Styles for Resep Populer section */
+        .slide-3 {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 50px 20px;
+            border-radius: 25px;
+            max-width: 1000px;
+            margin: 50px auto;
+            text-align: center;
+        }
+        .resep-populer-header {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .resep-populer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+        .resep-card {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 10px;
+            width: 30%;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        .resep-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .resep-number {
+            background-color: yellow;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            font-weight: bold;
+        }
+        .resep-title {
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        /* Styles for Daftarkan Diri section */
+        .slide-4 {
+            background-color: #e73535;
+            color: white;
+            text-align: center;
+            padding: 75px 20px;
+            position: relative;
+            margin: 50px auto;
+            border-radius: 25px;
+            max-width: 1000px;
+        }
+        .slide-4 h1 {
+            font-size: 2em;
+            margin: 0 0 20px;
+        }
+        .slide-4 p {
+            font-size: 1em;
+            margin: 0 0 20px;
+        }
+        .slide-4 button {
+            background-color: white;
+            color: #e73535;
+            border: none;
+            padding: 20px 20px;
+            font-size: 1em;
+            border-radius: 20px;
+            cursor: pointer;
+            z-index: 10;
+            position: relative;
+        }
+        .slide-4 button:hover {
+            background-color: #f2f2f2;
+        }
+        .curve {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 150px;
+            overflow: hidden;
+            line-height: 0;
+        }
+        .curve svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 150px;
+        }
+        .curve .shape-fill {
+            fill: #ffffff;
+        }
+
+        /* Styles for Footer section */
+        .footer {
+            background-color: white;
+            padding: 1px;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 9px solid #ddd;
+        }
+
+        .footer-column {
+            flex: 1;
+            margin: 10px;
+        }
+
+        .footer-column h3 {
+            margin-bottom: 10px;
+        }
+
+        .footer-column a {
+            display: block;
+            color: black;
+            text-decoration: none;
+            margin: 10px 0;
+        }
+
+        .footer-column a:hover {
+            text-decoration: underline;
+        }
+
+        .social-icons {
+            display: flex;
+            align-items: center;
+        }
+
+        .social-icons a {
+            margin: 0 7px;
+            text-decoration: none;
+        }
+
+        .social-icons img {
+            width: 30px;
+            height: 30px;
+        }
+
+        /*untuk menu masuk dan daftar*/
+        nav ul {
+            list-style: none;
+            display: flex;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            margin: 0 40px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #3abd3e;
+        }
+        .search-nav {
+            flex-grow: 0;
+            display: flex;
+            justify-content: center;
+        }
+        .search-nav input[type="text"] {
+            padding: 7px;
+            border: 2px solid #ccc;
+            border-radius: 9px;
+            width: 300px; /* Lebar awal untuk input pencarian */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Selera Timur</div>
+        <nav>
+            <nav class="search-nav">
+                <input type="text" placeholder="Pencarian">
+            </nav>
+            <ul>
+                <li><a href="menudaftar.html"> Daftar </a></li>
+                <li><a href="menulogin.html"> Masuk </a></li>
+            </ul>
+        </nav>
+        
+    </header>
+
+    <!-- Slide 1: Welcome Section -->
+    <div class="container">
+        <div class="content">
+            <p class="welcome">Selamat datang di situs kami,</p>
+            <h1><span class="brown-text">SELERA</span> <span class="green-text">TIMUR</span><br><span class="green-text">RESEP</span> <span class="brown-text">MAKANAN</span></h1>
+            <p class="description">
+                Selera Timur, adalah kuliner khusus yang menghadirkan kekayaan rasa dari Timur Indonesia langsung ke dapur Anda! 
+                Selera Timur dirancang untuk membantu Anda menemukan dan mencoba berbagai resep otentik dari wilayah Timur Indonesia.
+            
+            </p>
+        </div>
+    </div>
+
+    <!-- Slide 2: Kategori Section -->
+    <div class="slide-2">
+        <div class="header">SELERA TIMUR</div>
+        <h1>Kategori</h1>
+        <div class="category-container">
+            <div class="category-card">
+                <div class="category-icon">🍲</div>
+                <div class="category-title">Makanan Utama</div>
+                <div class="category-description">Makanan utama menyediakan energi, mendukung kesehatan, dan juga menjadi waktu untuk berkumpul dengan keluarga atau teman.</div>
+                <div class="arrow-icon">→</div>
+            </div>
+            <div class="category-card">
+                <div class="category-icon">🥞</div>
+                <div class="category-title">Makanan Penutup</div>
+                <div class="category-description">Makanan penutup adalah makanan yang disajikan setelah hidangan utama untuk menutupi makanan dengan sentuhan manis atau lezat.</div>
+                <div class="arrow-icon">→</div>
+            </div>
+            <div class="category-card">
+                <div class="category-icon">🍟</div>
+                <div class="category-title">Cemilan</div>
+                <div class="category-description">Cemilan adalah hidangan kecil yang biasanya dikonsumsi di antara hidangan utama.</div>
+                <div class="arrow-icon">→</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 3: Resep Populer Section -->
+    <div class="slide-3">
+        <h2 class="resep-populer-header">Resep Populer</h2>
+        <div class="resep-populer-container">
+            <div class="resep-card">
+                <div class="resep-number">1</div>
+                <img src="gambar/image/ikan bakar.jpg" alt="Ikan Bakar dabu-dabu">
+                <div class="resep-title">Ikan Bakar dabu-dabu</div>
+            </div>
+            <div class="resep-card">
+                <div class="resep-number">2</div>
+                <img src="gambar/image/kue lontar.jpg" alt="Kue Lontar">
+                <div class="resep-title">Kue Lontar</div>
+            </div>
+            <div class="resep-card">
+                <div class="resep-number">3</div>
+                <img src="gambar/image/pisang ijo.jpg" alt="Pisang Ijo">
+                <div class="resep-title">Pisang Ijo</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 4: Daftarkan Diri Section -->
+    <div class="slide-4">
+        <h1>Daftarkan Diri Anda Sekarang dan Dapatkan Berbagai Sajian Resep Istimewa ala Timur Indonesia!</h1>
+        <p>Apapun jenis sajian makanan timur Indonesia, Selera Timur solusinya!</p>
+        <button>Ayo! Daftar Sekarang</button>
+        <div class="curve">
+            <svg viewBox="0 0 280 95" preserveAspectRatio="none">
+                <path class="shape-fill" d="M0.00,49.98 C150.00,150.00 349.04,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"></path>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Slide 5: Footer Section -->
+<footer class="footer">
+    <div class="footer-column">
+        <h3 style="color: green; font-size: 35px;">Selera Timur</h3>
+    </div>
+    <div class="footer-column">
+        <h3>Bantuan</h3>
+        <a href="#hubungi">Hubungi Kami</a>
+        <a href="#sitemap">Sitemap</a>
+    </div>
+    <div class="footer-column">
+        <h3>Ikuti Kami</h3>
+        <div class="social-icons">
+            <a href="#instagram"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"></a> 
+            <a href="#fb"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook"></a>
+            <a href="#twitter"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/X_logo_2023.svg" alt="Twitter"></a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

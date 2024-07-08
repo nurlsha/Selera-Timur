@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selera Timur - Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            background-color: #fff;
+            border-radius: 0px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 90%;
+            max-width: 1200px;
+            height: 90vh;
+            position: relative;
+        }
+        .image-container {
+            flex: 1;
+            background-image: url('gambar/image/gambarlogin.jpg'); /* Path ke gambar yang Anda unggah */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .back-icon {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 24px;
+            color: #fff;
+            cursor: pointer;
+        }
+        .login-container {
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .login-container h1 {
+            color: green;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .login-container h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .login-container form {
+            display: flex;
+            flex-direction: column;
+        }
+        .login-container input {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .login-container button {
+            padding: 10px;
+            background-color: #4F4FB9;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .login-container button:hover {
+            background-color: #45a049;
+        }
+        .login-container .forgot-password {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .login-container .forgot-password a {
+            margin-left: 20px;
+        }
+        .login-container a {
+            color: blue;
+            text-decoration: none;
+        }
+        .login-container a:hover {
+            text-decoration: underline;
+        }
+        .login-container .google-login {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .login-container .google-login img {
+            margin-right: 10px;
+        }
+        .login-container .google-login button {
+            background-color: #fff;
+            color: #757575;
+            border: 1px solid #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+        .login-container .google-login button:hover {
+            background-color: #f2f2f2;
+        }
+        .login-container .signup {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="image-container">
+            <img src="gambar/image/gambarlogin.jpg" alt="Gambar Login">
+            <div class="back-icon">&#8592; </div>
+        </div>
+        <div class="login-container">
+            <h1>Selera Timur</h1>
+            <h2>Masuk</h2>
+            <form>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Kata sandi" required>
+                <div class="forgot-password">
+                    <button type="submit">Masuk</button>
+                    <a href="#">Lupa kata sandi?</a>
+                </div>
+                <div class="google-login">
+                    <button>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google Logo" width="20px">
+                        Masuk dengan Google
+                    </button>
+                </div>
+                <div class="signup">
+                    <a href="#">Belum punya akun? Daftar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
